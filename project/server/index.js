@@ -10,7 +10,19 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// Enhanced CORS configuration
+const corsOptions = {
+  origin: [
+    'https://infohub-nu.vercel.app',  // Your Vercel URL
+    'http://localhost:5173',           // Vite dev server
+    'http://localhost:3000'            // Common React dev server
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/weather', weatherRoutes);
