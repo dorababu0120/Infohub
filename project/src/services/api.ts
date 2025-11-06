@@ -2,7 +2,7 @@ import axios from 'axios';
 import type { WeatherData, CurrencyData, QuoteData } from '../types';
 
 // API Configuration
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://infohub-2-h7cs.onrender.com';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
 const OPENWEATHER_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 
 // Get API key from environment variables or use a fallback (for development only)
