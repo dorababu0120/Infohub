@@ -13,7 +13,11 @@ const PORT = process.env.PORT || 3001;
 // Enhanced CORS configuration
 const corsOptions = {
   origin: [
+<<<<<<< HEAD
     'https://infohub-nu.vercel.app',  // Your Vercel URL
+=======
+    'https://infohub-z3mj.vercel.app/',  // Your Vercel URL
+>>>>>>> 7d197f52a2a5d6984bda3c9e2fb367b35cb27e0f
     'http://localhost:5173',           // Vite dev server
     'http://localhost:3000'            // Common React dev server
   ],
